@@ -1,4 +1,6 @@
 require("dotenv").config();
+
+const http = require("http");
 const express = require("express");
 const cors = require("cors");
 const apiRoutes = require("./src/routes");
@@ -7,6 +9,7 @@ const {
   errorHandler,
   notFoundHandler,
 } = require("./src/middleware/errorHandler");
+const{ initSocket } = require("./src/socket");
 
 const app = express();
 
