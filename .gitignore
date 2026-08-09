@@ -1,4 +1,6 @@
+# ------------------------------
 # Logs
+# ------------------------------
 logs
 *.log
 npm-debug.log*
@@ -7,24 +9,51 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependencies
+# ------------------------------
+# Dependencies / build output
+# ------------------------------
 node_modules
+**/node_modules
 dist
 dist-ssr
+build
+coverage
 *.local
 
+# ------------------------------
+# Environment files (secrets)
+# ------------------------------
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# ------------------------------
 # Editor / OS
+# ------------------------------
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
 
-# Env
-.env
-.env.*
-!.env.example
+# ------------------------------
+# Runtime files
+# ------------------------------
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------
+# Optional secret-like files
+# ------------------------------
+*.pem
+*.key
